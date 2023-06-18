@@ -20,12 +20,15 @@ def main():
     while True:
         myQueue = Queue()
         list_size = int(input('\nHow many elements to enqueue? '))
-        for i in rang(list_size):
+        for i in range(list_size):
             input_element = input(f'Element {i+1}: ')
             myQueue.enqueue(input_element)
 
         print()
         print(myQueue.display_queue())
+
+        print(f'Rear Element: {myQueue.queue[0]}')
+        print(f'Front Element: {myQueue.queue[-1]}')
 
         dequeue_elements = int(input('\nHow many elements to dequeue? '))
         for j in range(dequeue_elements):
@@ -33,6 +36,9 @@ def main():
 
         print()
         print(myQueue.display_queue())
+
+        print(f'Rear Element: {myQueue.queue[0]}')
+        print(f'Front Element: {myQueue.queue[-1]}')
 
         print()
         choose = input('Try again?  [Y] Yes     [Any char] No: ')

@@ -27,12 +27,16 @@ def main():
         print()
         print(myStack.display_stack())
 
+        print(f'Top element: {myStack.stack[-1]}')      #peeks topmost element remaining
+
         pop_elements = int(input('\nHow many elements to pop? '))
         for j in range(pop_elements):
             myStack.pop()
 
         print()
         print(myStack.display_stack())
+
+        print(f'Top element: {myStack.stack[-1]}')      #peeks topmost element remaining
 
         print()
         choose = input('Try again? [Y] Yes      [Any char] No: ')
